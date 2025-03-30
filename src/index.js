@@ -18,3 +18,20 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded",() => {
+const breedURL = "https://dog.ceo/api/breeds/list/all";
+})
+fetch(breedUrl)
+.then (response => response.json())
+.then(data => {
+    const imageContainer = document.getElementById("dog-image-container");
+    data.message.forEach(breedUrl => {
+        const img = document.createElement("img")
+        img.src = breedUrl;
+        img.alt = "A dog";
+          
+    })
+
+})      
+
+
